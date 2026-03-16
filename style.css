@@ -179,7 +179,7 @@ color: var(--accent);
 .hero-stats {
   position: absolute;
   right: 2rem;
-  top: 50%;
+  top: 30%;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
@@ -267,13 +267,13 @@ color: var(--text);
 font-weight: 500;
 }
 
-.skills-grid {
+.skills-grid, .lang-grid {
 display: grid;
 grid-template-columns: 1fr 1fr;
 gap: 1rem;
 }
 
-.skill-item {
+.skill-item, .lang-item {
 background: var(--surface);
 border: 1px solid var(--border);
 padding: 1rem 1.2rem;
@@ -284,14 +284,14 @@ align-items: center;
 transition: border-color 0.2s;
 }
 
-.skill-item:hover { border-color: var(--accent); }
+.skill-item:hover, .lang-item:hover { border-color: var(--accent); }
 
-.skill-name {
+.skill-name, .lang-name {
 font-size: 0.85rem;
 font-weight: 500;
 }
 
-.skill-level {
+.skill-level, .lang-level {
 font-family: 'DM Mono', monospace;
 font-size: 0.65rem;
 padding: 0.2rem 0.5rem;
@@ -530,6 +530,48 @@ color: var(--text-muted);
 width: 60px;
 text-transform: uppercase;
 letter-spacing: 0.08em;
+}
+
+.social-icons-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.social-icons {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.social-icon:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.social-icon i {
+  font-size: 1rem;
 }
 
 /* FOOTER */
